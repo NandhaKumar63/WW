@@ -16,7 +16,7 @@ function showNextImage() {
   images[currentIndex].style.visibility = 'visible';
   timer = setTimeout(()=>{
     showNextImage();
-  }, 2000);
+  }, 2000); 
   
 }
 
