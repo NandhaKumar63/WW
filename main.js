@@ -75,21 +75,21 @@ ele.appendChild(container);
     //   vertices.push( + 0.10);
     }
 // Create 10 random triangles
-for (let i = 0; i < 2; i++) {
-  const randomIndices = getRandomTriangleIndices(vertices.length);
+// for (let i = 0; i < 2; i++) {
+//   const randomIndices = getRandomTriangleIndices(vertices.length);
   
-  const geometry = new THREE.BufferGeometry();
-  const verticesArray = [
-    0, 0, 0,
-    vertices[randomIndices[0]].x, vertices[randomIndices[0]].y, vertices[randomIndices[0]].z,
-    vertices[randomIndices[1]].x, vertices[randomIndices[1]].y, vertices[randomIndices[1]].z,
-    vertices[randomIndices[2]].x, vertices[randomIndices[2]].y, vertices[randomIndices[2]].z
-  ];
-  geometry.setAttribute('position', new THREE.Float32BufferAttribute(verticesArray, 3));
-  const material = new THREE.MeshBasicMaterial({ color: 0xfebd01, side: THREE.DoubleSide });
-  const triangle = new THREE.Mesh(geometry, material);
-  scene.add(triangle);
-}
+//   const geometry = new THREE.BufferGeometry();
+//   const verticesArray = [
+//     0, 0, 0,
+//     vertices[randomIndices[0]].x, vertices[randomIndices[0]].y, vertices[randomIndices[0]].z,
+//     vertices[randomIndices[1]].x, vertices[randomIndices[1]].y, vertices[randomIndices[1]].z,
+//     vertices[randomIndices[2]].x, vertices[randomIndices[2]].y, vertices[randomIndices[2]].z
+//   ];
+//   geometry.setAttribute('position', new THREE.Float32BufferAttribute(verticesArray, 3));
+//   const material = new THREE.MeshBasicMaterial({ color: 0xfebd01, side: THREE.DoubleSide });
+//   const triangle = new THREE.Mesh(geometry, material);
+//   scene.add(triangle);
+// }
 
 // Function to get random indices for a triangle
 function getRandomTriangleIndices(maxIndex) {
@@ -234,5 +234,5 @@ return indices;
   
     return texture;
   }
-
+  
   
