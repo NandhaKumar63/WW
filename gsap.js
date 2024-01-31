@@ -154,3 +154,6 @@ function menuClick(){
     }
   }
 }
+if (/Mobi|Android/i.test(navigator.userAgent)) {
+  gsap.core.globals("ScrollTrigger").disable();
+}

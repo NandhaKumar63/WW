@@ -621,23 +621,6 @@
    }
  }
  
- #mobile-menu-toggler {
-   color: #000;
-   font-size: 20px;
-   margin-left: auto;
-   margin-right: 10px;
- }
- 
- #mobile-menu-toggler:hover {
-   color: #ff7214;
- }
- 
- @media screen and (min-width: 992px) {
-   #mobile-menu-toggler {
-	 display: none;
-   }
- }
- 
  .menu-dropdown {
    color: #000;
    cursor: pointer;
