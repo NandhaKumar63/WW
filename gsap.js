@@ -65,23 +65,23 @@ gsap.to(".projects__title__wrap", {
 
 
 
-gsap.set('.projects__item', {
-  y: '100%'
-});
+// gsap.set('.projects__item', {
+//   y: '100%'
+// });
 
-gsap.to('.projects__item', {
-  y: 0,
-  duration: 0.5,
-  stagger: 0.2,
-  ease: 'linear',
-  scrollTrigger: {
-    trigger: '.projects__wrap',
-    start: 'top 70%',
-    end: "+=500px",
-    scrub: 0.5,
-    // markers: true,
-  }
-})
+// gsap.to('.projects__item', {
+//   y: 0,
+//   duration: 0.5,
+//   stagger: 0.2,
+//   ease: 'linear',
+//   scrollTrigger: {
+//     trigger: '.projects__wrap',
+//     start: 'top 70%',
+//     end: "+=500px",
+//     scrub: 0.5,
+//     // markers: true,
+//   }
+// })
 
 // // Project stack FX
 let allProjects = gsap.utils.toArray('.index__section.intro .title div');
@@ -107,19 +107,19 @@ let allProjects = gsap.utils.toArray('.index__section.intro .title div');
 // });
 
 
-gsap.fromTo(".polygon_section.about_us",
-  {
-    x: '300px'
-  }, {
-  x: 0,
-  duration: 0.2,
-  scrollTrigger: {
-    trigger: ".polygon_section.about_us",
-    start: () => "top 60%",
-    scrub: 0.2,
-    // markers: true
-  }
-});
+// gsap.fromTo(".polygon_section.about_us",
+//   {
+//     x: '300px'
+//   }, {
+//   x: 0,
+//   duration: 0.2,
+//   scrollTrigger: {
+//     trigger: ".polygon_section.about_us",
+//     start: () => "top 60%",
+//     scrub: 0.2,
+//     // markers: true
+//   }
+// });
 
 
 // const bannerCaptionSplit = document.querySelectorAll('.banner-caption');
