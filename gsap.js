@@ -124,16 +124,16 @@ let allProjects = gsap.utils.toArray('.index__section.intro .title div');
 
 // const bannerCaptionSplit = document.querySelectorAll('.banner-caption');
 
-// gsap.fromTo(".logo", {
-//   scale: 0.9,
-//   opacity: 0.8
-// }, {
-//   scale: 1,
-//   opacity: 1,
-//   duration: 2,
-//   repeat: -1,
-//   yoyo: true
-// });
+gsap.fromTo(".logo", {
+  scale: 0.9,
+  opacity: 0.8
+}, {
+  scale: 1,
+  opacity: 1,
+  duration: 2,
+  repeat: -1,
+  yoyo: true
+});
 
 
 function menuClick(){
@@ -146,6 +146,7 @@ function menuClick(){
     }
   }
 }
+console.log(gsapScrollTrigger);
 if (/Mobi|Android/i.test(navigator.userAgent)) {
   alert('disabled');
   gsap.core.globals("ScrollTrigger").disable();
