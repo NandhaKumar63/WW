@@ -1,30 +1,29 @@
 
 gsap.registerPlugin(ScrollTrigger);
-const tl = gsap.timeline();
 
-const splitTypes = document.querySelectorAll('.index__section.about .paragraph .word .word__inner');
-splitTypes.forEach((char) => {
-  const text = new SplitType(char, {
-    types: 'chars'
-  });
+// const splitTypes = document.querySelectorAll('.index__section.about .paragraph .word .word__inner');
+// splitTypes.forEach((char) => {
+//   const text = new SplitType(char, {
+//     types: 'chars'
+//   });
 
-  gsap.from(text.chars, {
-    backgroundPositionX: 0,
-    ease: "none",
-    stagger: 0.2,
-    y: 0,
-    opacity: 0,
-    transformOrigin: 'top',
-    duration: 3,
-    scrollTrigger: {
-      trigger: char,
-      // markers: true,
-      scrub: 0.6,
-      start: "top 90%",
-      end: "top 50%"
-    }
-  });
-});
+//   gsap.from(text.chars, {
+//     backgroundPositionX: 0,
+//     ease: "none",
+//     stagger: 0.2,
+//     y: 0,
+//     opacity: 0,
+//     transformOrigin: 'top',
+//     duration: 3,
+//     scrollTrigger: {
+//       trigger: char,
+//       // markers: true,
+//       scrub: 0.6,
+//       start: "top 90%",
+//       end: "top 50%"
+//     }
+//   });
+// });
 
 
 const container = document.querySelector(".index__section.projects");
@@ -123,18 +122,18 @@ gsap.fromTo(".polygon_section.about_us",
 });
 
 
-const bannerCaptionSplit = document.querySelectorAll('.banner-caption');
+// const bannerCaptionSplit = document.querySelectorAll('.banner-caption');
 
-gsap.fromTo(".logo", {
-  scale: 0.9,
-  opacity: 0.8
-}, {
-  scale: 1,
-  opacity: 1,
-  duration: 2,
-  repeat: -1,
-  yoyo: true
-});
+// gsap.fromTo(".logo", {
+//   scale: 0.9,
+//   opacity: 0.8
+// }, {
+//   scale: 1,
+//   opacity: 1,
+//   duration: 2,
+//   repeat: -1,
+//   yoyo: true
+// });
 
 
 function menuClick(){
