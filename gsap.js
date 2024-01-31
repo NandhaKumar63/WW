@@ -89,23 +89,23 @@ let allProjects = gsap.utils.toArray('.index__section.intro .title div');
 
 
 
-gsap.fromTo(".index__section.intro .title div",
-  {
-    y: window.innerHeight
-  }, {
-  y: -50 + (allProjects.length - 1),
-  ease: "sine.out",
-  stagger: 0.5,
-  duration: 1,
-  scrollTrigger: {
-    trigger: ".index__section.intro",
-    start: () => "top 50px",
-    scrub: 1,
-    pin: true,
-    pinSpacing: false,
-    // markers: true
-  }
-});
+// gsap.fromTo(".index__section.intro .title div",
+//   {
+//     y: window.innerHeight
+//   }, {
+//   y: -50 + (allProjects.length - 1),
+//   ease: "sine.out",
+//   stagger: 0.5,
+//   duration: 1,
+//   scrollTrigger: {
+//     trigger: ".index__section.intro",
+//     start: () => "top 50px",
+//     scrub: 1,
+//     pin: true,
+//     pinSpacing: false,
+//     // markers: true
+//   }
+// });
 
 
 gsap.fromTo(".polygon_section.about_us",
