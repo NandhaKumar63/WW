@@ -49,19 +49,19 @@ gsap.to(".projects__wrap", {
   },
 });
 
-gsap.to(".projects__title__wrap", {
-  x: () => -(document.querySelector(".projects__title__wrap").offsetWidth - window.innerWidth),
-  ease: "sine.out",
-  duration: 0.2,
-  scrollTrigger: {
-    trigger: ".projects__content",
-    start: "top top",
-    end: () => "+=" + document.querySelector(".projects__title__wrap").offsetWidth,
-    scrub: true,
-    pin: true,
-    pinSpacing: false
-  },
-});
+// gsap.to(".projects__title__wrap", {
+//   x: () => -(document.querySelector(".projects__title__wrap").offsetWidth - window.innerWidth),
+//   ease: "sine.out",
+//   duration: 0.2,
+//   scrollTrigger: {
+//     trigger: ".projects__content",
+//     start: "top top",
+//     end: () => "+=" + document.querySelector(".projects__title__wrap").offsetWidth,
+//     scrub: true,
+//     pin: true,
+//     pinSpacing: false
+//   },
+// });
 
 
 
