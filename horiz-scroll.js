@@ -28,16 +28,8 @@ scrollContainer.addEventListener('wheel', (event) => {
     scrollPosition2 = Math.min(
         projectTitle.clientWidth - scrollContainer.clientWidth,
         Math.max(0, scrollPosition)
-    );
-
-    const maxPos = projectTitle.clientWidth - scrollContainer.clientWidth;
-    if((scrollPosition1 === 0 && scrollPosition2 === 0) || scrollPosition2 >= maxPos){
-       
-    } else {
-        // event.preventDefault();
-    }
+    )
   
-
     // Apply the scroll using translate3d
     projectContent.style.transform = `translate3d(-${scrollPosition1}px, 0, 0)`;
     projectTitle.style.transform = `translate3d(-${scrollPosition2}px, 0, 0)`;

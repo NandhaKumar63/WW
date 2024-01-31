@@ -5,17 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wattawow | About</title>
     <link rel="icon" type="image/png" href="/assets/images/logo_web.png">
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded',function(e){
-            document.body.scrollTo(0,0);
-        });
-    </script>
-    <link href="./assets/css/main.css" rel="stylesheet"></link>
-  
-    <script type="importmap"> { "imports": { "three": "https://unpkg.com/three@0.149.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@v0.149.0/examples/jsm/" } } </script>
+    <link href="./assets/css/main.css" rel="stylesheet">
+    </link>
+
+    <script
+        type="importmap"> { "imports": { "three": "https://unpkg.com/three@0.149.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@v0.149.0/examples/jsm/" } } </script>
     <script src="main.js" type="module"></script>
-      
-        
+
+
 </head>
 
 <body>
@@ -24,30 +21,48 @@
         <div id="layout">
             <div>
                 <header class="header" style="opacity: 1; visibility: inherit;">
-                    <!---->
+                    <div class="menu u-abs u-center">
+                        <ul style="opacity: 1; visibility: inherit;">
+                            <li class="internal" style="opacity: 1; visibility: inherit;">
+                                <a href="/home.html">Home </a>
+                            </li>
+                            <li class="internal" style="opacity: 1; visibility: inherit;">
+                                <a href="/wow-for-business.html" class="">
+                                    Business
+                                </a></li>
+                            <li class="internal" style="opacity: 1; visibility: inherit;"><a href="/join-with-us.html"
+                                    class="">
+                                    Join
+                                </a></li>
+                            <li class="internal" style="opacity: 1; visibility: inherit;"><a href="/contact-us.html"
+                                    class="">
+                                    Contact Us
+                                </a></li>
+                        </ul>
+                    </div>
                     <div class="header__el header__el --white">
                         <ul class="header__nav --left">
-                            <li><a href="/" aria-current="page" class="is-logo nuxt-link-exact-active nuxt-link-active">
-                                Watta WOW
+                            <li><a href="/" class="is-logo">
+                                    Watta WOW
                                 </a></li>
                         </ul>
                         <ul class="header__nav --right --nav-desktop">
-                            <li class="internal"><a href="/home.html" aria-current="page"
-                                class="nuxt-link-exact-active nuxt-link-active">
-                                Home
-                            </a></li>
-                        <li class="internal"><a href="/wow-for-business.html" class="">
-                                Business
-                            </a></li>
-                        <li class="internal"><a href="/join-with-us.html" class="">
-                                Join
-                        </a></li>
-                        <li class="internal"><a href="/contact-us.html" class="">
-                            Contact Us
-                        </a></li>
+                            <li class="internal"><a href="/home.html"
+                                    class="">
+                                    Home
+                                </a></li>
+                            <li class="internal"><a href="/wow-for-business.html" class="">
+                                    Business
+                                </a></li>
+                            <li class="internal"><a href="/join-with-us.html" class="">
+                                    Join
+                                </a></li>
+                            <li class="internal"><a href="/contact-us.html" class="">
+                                    Contact Us
+                                </a></li>
                         </ul>
                         <ul class="header__nav --right --nav-mobile">
-                            <li><a href="javascript:void(0)">
+                            <li><a href="javascript:void(0)" onclick="menuClick()">
                                     Menu
                                 </a></li>
                         </ul>
@@ -59,13 +74,13 @@
                     </div>
                     <div class="header__el header__el --black">
                         <ul class="header__nav --left">
-                            <li><a href="/" aria-current="page" class="is-logo nuxt-link-exact-active nuxt-link-active">
-                                Watta WOW
+                            <li><a href="/"  class="is-logo">
+                                    Watta WOW
                                 </a></li>
                         </ul>
                         <ul class="header__nav --right --nav-desktop">
-                            <li class="internal"><a href="/" aria-current="page"
-                                    class="nuxt-link-exact-active nuxt-link-active">
+                            <li class="internal"><a href="/"
+                                    class="">
                                     Home
                                 </a>
                             <li class="internal"><a href="/press" class="">
@@ -81,8 +96,8 @@
                                 </a></li>
                         </ul>
                         <div class="logo">
-                            <div >
-                                <img src="https://www.wattawow.com/_nuxt/img/logo.3b17afc.png" alt="Logo"/>
+                            <div>
+                                <img src="https://www.wattawow.com/_nuxt/img/logo.3b17afc.png" alt="Logo" />
                                 <!-- <svg width="72" height="77" viewBox="0 0 72 77" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -96,8 +111,8 @@
                 <div id="webgl--banner">
                     <div id="banner-text--animate">
                         <div class="logo">
-                            <div >
-                                <img src="https://www.wattawow.com/_nuxt/img/logo.3b17afc.png" alt="Logo"/>
+                            <div>
+                                <img src="https://www.wattawow.com/_nuxt/img/logo.3b17afc.png" alt="Logo" />
                             </div>
                         </div>
                     </div>
@@ -105,9 +120,9 @@
                 <section class="index__section intro" data-section="">
                     <div class="polygon_section intro">
                         <!-- <img src="./assets/images/diamond (2).png" alt=""> -->
-                           <!-- <div class="ir-polygon one"></div>
+                        <!-- <div class="ir-polygon one"></div>
                            <div class="ir-polygon two"></div> -->
-                           <!-- <div class="donut-container">
+                        <!-- <div class="donut-container">
                             <div class="donut"></div>
                             <div class="hole"></div>
                           </div> -->
@@ -116,20 +131,25 @@
                     <div>
                         <h1 class="title title--large">
                             <div>
-                                <span>Creating vibrant and </span></div>
+                                <span>Creating vibrant and </span>
+                            </div>
                             <div>
-                                <span>digitally active </span></div>
+                                <span>digitally active </span>
+                            </div>
                             <div>
-                                <span>sports communities </span></div>
+                                <span>sports communities </span>
+                            </div>
                             <div>
-                                <span>that share stories, </span></div>
+                                <span>that share stories, </span>
+                            </div>
                             <div>
-                                <span>experience and passion.</span></div>
+                                <span>experience and passion.</span>
+                            </div>
                         </h1>
                     </div>
                     <!-- <section class="index__section --webgl" data-section=""></section> -->
                 </section>
-            
+
                 <div class="page index" style="opacity: 1; visibility: inherit;">
                     <div class="bounding">
                         <section class="index__section --webgl" data-section=""></section>
@@ -139,332 +159,316 @@
                             </div>
                             <div>
                                 <div class="paragraph">
-                                    <div class="word"><span
-                                            class="word__inner">We're</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">all</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">about</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">the</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">awesome</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">connection</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">thats</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">sports</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">being!</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">When</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">people</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">share</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">that</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">love</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">a sport,</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">it's like an</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">instant bond.</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">Our online platform</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">is where</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">folks</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">can gather,</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">plan their sports</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">adventures,</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">swap</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">stories,</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">and show off</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">their achievements.</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">We're on</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">a mission</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">to make sure</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">everyone</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">feels super</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">stoked and</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">proud of</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">what</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">they're</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">doing</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">with their</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">favorite sport.</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">We've</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">kicked off</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">our</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">journey</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">with</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">cycling,</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">and</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">we've</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">dubbed</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">our</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">online</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">platform -</span></div>
-                                    <div class="word"><span
-                                            class="word__inner">Wattawow.</span></div>
+                                    <div class="word"><span class="word__inner">We're</span></div>
+                                    <div class="word"><span class="word__inner">all</span></div>
+                                    <div class="word"><span class="word__inner">about</span></div>
+                                    <div class="word"><span class="word__inner">the</span></div>
+                                    <div class="word"><span class="word__inner">awesome</span></div>
+                                    <div class="word"><span class="word__inner">connection</span></div>
+                                    <div class="word"><span class="word__inner">thats</span></div>
+                                    <div class="word"><span class="word__inner">sports</span></div>
+                                    <div class="word"><span class="word__inner">being!</span></div>
+                                    <div class="word"><span class="word__inner">When</span></div>
+                                    <div class="word"><span class="word__inner">people</span></div>
+                                    <div class="word"><span class="word__inner">share</span></div>
+                                    <div class="word"><span class="word__inner">that</span></div>
+                                    <div class="word"><span class="word__inner">love</span></div>
+                                    <div class="word"><span class="word__inner">a sport,</span></div>
+                                    <div class="word"><span class="word__inner">it's like an</span></div>
+                                    <div class="word"><span class="word__inner">instant bond.</span></div>
+                                    <div class="word"><span class="word__inner">Our online platform</span></div>
+                                    <div class="word"><span class="word__inner">is where</span></div>
+                                    <div class="word"><span class="word__inner">folks</span></div>
+                                    <div class="word"><span class="word__inner">can gather,</span></div>
+                                    <div class="word"><span class="word__inner">plan their sports</span></div>
+                                    <div class="word"><span class="word__inner">adventures,</span></div>
+                                    <div class="word"><span class="word__inner">swap</span></div>
+                                    <div class="word"><span class="word__inner">stories,</span></div>
+                                    <div class="word"><span class="word__inner">and show off</span></div>
+                                    <div class="word"><span class="word__inner">their achievements.</span></div>
+                                    <div class="word"><span class="word__inner">We're on</span></div>
+                                    <div class="word"><span class="word__inner">a mission</span></div>
+                                    <div class="word"><span class="word__inner">to make sure</span></div>
+                                    <div class="word"><span class="word__inner">everyone</span></div>
+                                    <div class="word"><span class="word__inner">feels super</span></div>
+                                    <div class="word"><span class="word__inner">stoked and</span></div>
+                                    <div class="word"><span class="word__inner">proud of</span></div>
+                                    <div class="word"><span class="word__inner">what</span></div>
+                                    <div class="word"><span class="word__inner">they're</span></div>
+                                    <div class="word"><span class="word__inner">doing</span></div>
+                                    <div class="word"><span class="word__inner">with their</span></div>
+                                    <div class="word"><span class="word__inner">favorite sport.</span></div>
+                                    <div class="word"><span class="word__inner">We've</span></div>
+                                    <div class="word"><span class="word__inner">kicked off</span></div>
+                                    <div class="word"><span class="word__inner">our</span></div>
+                                    <div class="word"><span class="word__inner">journey</span></div>
+                                    <div class="word"><span class="word__inner">with</span></div>
+                                    <div class="word"><span class="word__inner">cycling,</span></div>
+                                    <div class="word"><span class="word__inner">and</span></div>
+                                    <div class="word"><span class="word__inner">we've</span></div>
+                                    <div class="word"><span class="word__inner">dubbed</span></div>
+                                    <div class="word"><span class="word__inner">our</span></div>
+                                    <div class="word"><span class="word__inner">online</span></div>
+                                    <div class="word"><span class="word__inner">platform -</span></div>
+                                    <div class="word"><span class="word__inner">Wattawow.</span></div>
                                 </div>
                             </div>
                         </section>
-                        <section  class="index__section projects" data-section="">
-                            <div  data-sticky="sm" data-sticky-masked="" data-sticky-masked-bottom="">
-                                <div  class="projects__content">
-                                    <div  class="projects__grid">
-                                        <div  class="projects__wrap" >
-                                            <a id="imageContainer"  href="https://boredapeyachtclub.com/#/" target="_blank" data-index="0" class="projects__item">
-                                                <div  class="projects__item__asset u-abs ">
-                                                    <div  class="projects__item__logo u-abs u-center" style="background-color: rgb(19, 19, 19);color: #fff;">
-                                                        Anyone who 
-                                                        hops on a bike is 
-                                                        cyclist and says 
+                        <section class="index__section projects" data-section="">
+                            <div data-sticky="sm" data-sticky-masked="" data-sticky-masked-bottom="">
+                                <div class="projects__content">
+                                    <div class="projects__grid">
+                                        <div class="projects__wrap">
+                                            <a id="imageContainer" href="https://boredapeyachtclub.com/#/"
+                                                target="_blank" data-index="0" class="projects__item">
+                                                <div class="projects__item__asset u-abs ">
+                                                    <div class="projects__item__logo u-abs u-center"
+                                                        style="background-color: rgb(19, 19, 19);color: #fff;">
+                                                        Anyone who
+                                                        hops on a bike is
+                                                        cyclist and says
                                                         Wattawow.
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/2a7e3e.png"type="image/png">
-                                                            <img src="./assets/images/2a7e3e.png"alt="img1">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/2a7e3e.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/2a7e3e.png" alt="img1">
                                                         </picture>
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/2e9623.png"type="image/png">
-                                                            <img src="./assets/images/2e9623.png"alt="img2">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/2e9623.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/2e9623.png" alt="img2">
                                                         </picture>
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/72cbac.png"type="image/png">
-                                                            <img src="./assets/images/72cbac.png"alt="img3">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/72cbac.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/72cbac.png" alt="img3">
                                                         </picture>
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/7013ba.png"type="image/png">
-                                                            <img src="./assets/images/7013ba.png"alt="img4">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/7013ba.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/7013ba.png" alt="img4">
                                                         </picture>
                                                     </div>
                                                 </div>
                                             </a>
-                                            <a  href="https://boredapeyachtclub.com/#/mayc"
-                                                target="_blank" data-index="1" class="projects__item">
-                                                <div  class="projects__item__asset u-abs">
-                                                    <div  class="projects__item__logo u-abs u-center" style="background-color: rgb(211, 222, 93);color: #000;">
+                                            <a href="https://boredapeyachtclub.com/#/mayc" target="_blank"
+                                                data-index="1" class="projects__item">
+                                                <div class="projects__item__asset u-abs">
+                                                    <div class="projects__item__logo u-abs u-center"
+                                                        style="background-color: rgb(211, 222, 93);color: #000;">
                                                         Brands and resellers
-                                                        can create and run 
-                                                        cycling 
-                                                        communities to 
-                                                        engage with their 
+                                                        can create and run
+                                                        cycling
+                                                        communities to
+                                                        engage with their
                                                         customers
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/02a69f.png"type="image/png">
-                                                            <img src="./assets/images/02a69f.png"alt="img1">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/02a69f.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/02a69f.png" alt="img1">
                                                         </picture>
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/012d7f.png"type="image/png">
-                                                            <img src="./assets/images/012d7f.png"alt="img2">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/012d7f.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/012d7f.png" alt="img2">
                                                         </picture>
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/a532fc.png"type="image/png">
-                                                            <img src="./assets/images/a532fc.png"alt="img3">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/a532fc.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/a532fc.png" alt="img3">
                                                         </picture>
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/e6cc7e.png"type="image/png">
-                                                            <img src="./assets/images/e6cc7e.png"alt="img4">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/e6cc7e.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/e6cc7e.png" alt="img4">
                                                         </picture>
                                                     </div>
                                                 </div>
                                             </a>
-                                            <a  href="https://boredapeyachtclub.com/#/kennel-club" target="_blank" data-index="2" class="projects__item">
-                                                <div  class="projects__item__asset u-abs">
-                                                    <div  class="projects__item__logo u-abs u-center" style="background-color: rgb(0, 0, 0);color: #fff;">
-                                                        Plan rides, invite 
-                                                        friends and 
-                                                        customers, ride, and 
-                                                        share the ride 
+                                            <a href="https://boredapeyachtclub.com/#/kennel-club" target="_blank"
+                                                data-index="2" class="projects__item">
+                                                <div class="projects__item__asset u-abs">
+                                                    <div class="projects__item__logo u-abs u-center"
+                                                        style="background-color: rgb(0, 0, 0);color: #fff;">
+                                                        Plan rides, invite
+                                                        friends and
+                                                        customers, ride, and
+                                                        share the ride
                                                         experience
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/2a7e3e.png"type="image/png">
-                                                            <img src="./assets/images/2a7e3e.png"alt="img1">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/2a7e3e.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/2a7e3e.png" alt="img1">
                                                         </picture>
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/2e9623.png"type="image/png">
-                                                            <img src="./assets/images/2e9623.png"alt="img2">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/2e9623.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/2e9623.png" alt="img2">
                                                         </picture>
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/72cbac.png"type="image/png">
-                                                            <img src="./assets/images/72cbac.png"alt="img3">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/72cbac.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/72cbac.png" alt="img3">
                                                         </picture>
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/7013ba.png"type="image/png">
-                                                            <img src="./assets/images/7013ba.png"alt="img4">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/7013ba.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/7013ba.png" alt="img4">
                                                         </picture>
                                                     </div>
                                                 </div>
                                             </a>
-                                            <a  href="https://cryptopunks.app/" target="_blank" data-index="3" class="projects__item">
-                                                <div  class="projects__item__asset u-abs">
-                                                    <div  class="projects__item__logo u-abs u-center" style="background-color: rgb(234, 52, 176);">
-                                                        Create and manage 
-                                                        cycling clubs that 
-                                                        members and 
-                                                        customers love to be 
+                                            <a href="https://cryptopunks.app/" target="_blank" data-index="3"
+                                                class="projects__item">
+                                                <div class="projects__item__asset u-abs">
+                                                    <div class="projects__item__logo u-abs u-center"
+                                                        style="background-color: rgb(234, 52, 176);">
+                                                        Create and manage
+                                                        cycling clubs that
+                                                        members and
+                                                        customers love to be
                                                         part of.
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/02a69f.png"type="image/png">
-                                                            <img src="./assets/images/02a69f.png"alt="img1">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/02a69f.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/02a69f.png" alt="img1">
                                                         </picture>
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/012d7f.png"type="image/png">
-                                                            <img src="./assets/images/012d7f.png"alt="img2">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/012d7f.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/012d7f.png" alt="img2">
                                                         </picture>
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/a532fc.png"type="image/png">
-                                                            <img src="./assets/images/a532fc.png"alt="img3">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/a532fc.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/a532fc.png" alt="img3">
                                                         </picture>
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/e6cc7e.png"type="image/png">
-                                                            <img src="./assets/images/e6cc7e.png"alt="img4">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/e6cc7e.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/e6cc7e.png" alt="img4">
                                                         </picture>
                                                     </div>
                                                 </div>
                                             </a>
-                                            <a  href="https://meebits.app/" target="_blank" data-index="4" class="projects__item">
-                                                <div  class="projects__item__asset u-abs">
-                                                    <div  class="projects__item__logo u-abs u-center" style="background-color: rgb(255, 255, 255);color: #000;">
-                                                        Create and run 
-                                                        challenges, gamify 
+                                            <a href="https://meebits.app/" target="_blank" data-index="4"
+                                                class="projects__item">
+                                                <div class="projects__item__asset u-abs">
+                                                    <div class="projects__item__logo u-abs u-center"
+                                                        style="background-color: rgb(255, 255, 255);color: #000;">
+                                                        Create and run
+                                                        challenges, gamify
                                                         and have fun.
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/2a7e3e.png"type="image/png">
-                                                            <img src="./assets/images/2a7e3e.png"alt="img1">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/2a7e3e.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/2a7e3e.png" alt="img1">
                                                         </picture>
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/2e9623.png"type="image/png">
-                                                            <img src="./assets/images/2e9623.png"alt="img2">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/2e9623.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/2e9623.png" alt="img2">
                                                         </picture>
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/72cbac.png"type="image/png">
-                                                            <img src="./assets/images/72cbac.png"alt="img3">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/72cbac.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/72cbac.png" alt="img3">
                                                         </picture>
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/7013ba.png"type="image/png">
-                                                            <img src="./assets/images/7013ba.png"alt="img4">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/7013ba.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/7013ba.png" alt="img4">
                                                         </picture>
                                                     </div>
                                                 </div>
                                             </a>
                                             <a href="" target="_blank" data-index="5" class="projects__item">
                                                 <div class="projects__item__asset u-abs">
-                                                    <div  class="projects__item__logo u-abs u-center" style="background-color: rgb(19, 19, 19);">
-                                                        Recognize 
-                                                        achievements, 
-                                                        showcase them to 
+                                                    <div class="projects__item__logo u-abs u-center"
+                                                        style="background-color: rgb(19, 19, 19);">
+                                                        Recognize
+                                                        achievements,
+                                                        showcase them to
                                                         the world
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/02a69f.png"type="image/png">
-                                                            <img src="./assets/images/02a69f.png"alt="img1">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/02a69f.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/02a69f.png" alt="img1">
                                                         </picture>
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/012d7f.png"type="image/png">
-                                                            <img src="./assets/images/012d7f.png"alt="img2">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/012d7f.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/012d7f.png" alt="img2">
                                                         </picture>
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/a532fc.png"type="image/png">
-                                                            <img src="./assets/images/a532fc.png"alt="img3">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/a532fc.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/a532fc.png" alt="img3">
                                                         </picture>
                                                     </div>
-                                                    <div  class="projects__item__loop u-abs js-loop">
-                                                        <picture  decoding="async" style="image-rendering: auto;">
-                                                            <source srcset="./assets/images/e6cc7e.png"type="image/png">
-                                                            <img src="./assets/images/e6cc7e.png"alt="img4">
+                                                    <div class="projects__item__loop u-abs js-loop">
+                                                        <picture decoding="async" style="image-rendering: auto;">
+                                                            <source srcset="./assets/images/e6cc7e.png"
+                                                                type="image/png">
+                                                            <img src="./assets/images/e6cc7e.png" alt="img4">
                                                         </picture>
                                                     </div>
                                                 </div>
                                             </a>
                                         </div>
                                     </div>
-                                    <div  class="projects__title">
-                                        <div  class="projects__title__wrap">
-                                            <span  class="title --xlarge --mobile">wattawow</span> <span 
-                                                class="title --xlarge --desktop">wattawow wattawow wattawow wattawow</span></div>
+                                    <div class="projects__title">
+                                        <div class="projects__title__wrap">
+                                            <span class="title --xlarge --mobile">wattawow</span> <span
+                                                class="title --xlarge --desktop">wattawow wattawow wattawow
+                                                wattawow</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -473,12 +477,12 @@
                             <div>
                                 <h2 class="title title--large">Community is Everything...</h2>
                                 <h3 class="sub-title">Wattawow is run by Milespeak Technologies</h3>
-                                <div class="paragraph">Wattawow is the brainchild of Milespeak Technologies, founded by 
+                                <div class="paragraph">Wattawow is the brainchild of Milespeak Technologies, founded by
                                     a team of four brought together by their mutual love for cycling.
-                                    Here's the kicker - these four buddies aren't Tour de France 
-                                    material; they're just everyday folks who discovered the joy of 
-                                    biking in their late 30s. Picture this: they roll into the office 
-                                    everyday, fuelled by the belief that they're on a mission to turn the world 
+                                    Here's the kicker - these four buddies aren't Tour de France
+                                    material; they're just everyday folks who discovered the joy of
+                                    biking in their late 30s. Picture this: they roll into the office
+                                    everyday, fuelled by the belief that they're on a mission to turn the world
                                     into a happier place, one pedal at a time!</div>
                                 <div class="apecoin__button"><a href="https://www.wattawow.com/" target="_blank"
                                         class="rounded"><span>Learn more</span></a></div>
@@ -502,19 +506,18 @@
                             <div class="page__padding">
                                 <div class="footer__grid">
                                     <ul>
-                                        <li class="internal"><a href="/home.html" aria-current="page"
-                                            class="nuxt-link-exact-active nuxt-link-active">
-                                            Home
-                                        </a></li>
-                                    <li class="internal"><a href="/wow-for-business.html" class="">
-                                            Business
-                                        </a></li>
-                                    <li class="internal"><a href="/join-with-us.html" class="">
-                                            Join
-                                    </a></li>
-                                    <li class="internal"><a href="/contact-us.html" class="">
-                                        Contact Us
-                                    </a></li>
+                                        <li class="internal"><a href="/home.html" >
+                                                Home
+                                            </a></li>
+                                        <li class="internal"><a href="/wow-for-business.html" class="">
+                                                Business
+                                            </a></li>
+                                        <li class="internal"><a href="/join-with-us.html" class="">
+                                                Join
+                                            </a></li>
+                                        <li class="internal"><a href="/contact-us.html" class="">
+                                                Contact Us
+                                            </a></li>
                                     </ul>
                                     <ul>
                                         <li><a href="https://wattawow.com/privacypolicy/" target="_blank" class="">
@@ -525,12 +528,10 @@
                                             </a></li>
                                     </ul>
                                     <ul>
-                                        <li><a href="https://twitter.com/" target="_blank"
-                                                rel="noopener noreferrer">
+                                        <li><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
                                                 Twitter
                                             </a></li>
-                                        <li><a href="https://instagram.com/" target="_blank"
-                                                rel="noopener noreferrer">
+                                        <li><a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
                                                 Instagram
                                             </a></li>
                                     </ul>
@@ -542,20 +543,20 @@
             </div>
         </div>
         </div>
-        </main>
+    </main>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-        <script src="https://unpkg.com/split-type"></script>
-        <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
-        <script src="./gsap.js"></script>
-        <!-- <script src='./text-morph.js'></script> -->
-        <script src='./img-loop.js'></script>
-        <!-- <script src='./intersection-observer.js'></script> -->
-        
-<script>
-   
-</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    <script src="./gsap.js"></script>
+    <!-- <script src='./text-morph.js'></script> -->
+    <script src='./img-loop.js'></script>
+    <!-- <script src='./intersection-observer.js'></script> -->
+
+    <script>
+
+    </script>
 
 </body>
 

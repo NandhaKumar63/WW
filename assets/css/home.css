@@ -299,7 +299,7 @@
  .header {
    display: block;
    position: relative;
-   padding: 20px 0;
+   padding: 15px 0;
    width: 100%;
  }
  
@@ -326,15 +326,7 @@
    display: block;
    max-width: 79px;
  }
- 
- 
- .abs-header {
-   position: absolute;
-   top: 0;
-   left: 0;
-   z-index: 2;
- }
- 
+
  @media screen and (max-width: 991px) {
    .abs-header {
 	 background-color: #fff;
@@ -372,7 +364,7 @@
    font-family: "Roboto", sans-serif;
    font-weight: 700;
    line-height: 0.8;
-   padding: 40px 15px;
+   padding: 20px 15px;
  }
  
  .navbar-nav li a li.current-menu-item a, .navbar-nav li a:hover {
@@ -440,14 +432,10 @@
  }
  
  #mobile-menu-toggler {
-   color: #000;
+   color: #f6ba33;
    font-size: 20px;
    margin-left: auto;
    margin-right: 10px;
- }
- 
- #mobile-menu-toggler:hover {
-   color: #ff7214;
  }
  
  @media screen and (min-width: 992px) {
@@ -489,6 +477,7 @@
    position: relative;
    padding: 20px 0;
    width: 100%;
+   background-color: beige;
  }
  
  .header .btn {
@@ -517,7 +506,7 @@
 
  
  .abs-header {
-   position: absolute;
+   position: fixed;
    top: 0;
    left: 0;
    z-index: 2;
@@ -560,7 +549,7 @@
    font-family: "Roboto", sans-serif;
    font-weight: 700;
    line-height: 0.8;
-   padding: 40px 15px;
+   padding: 20px 15px;
  }
  
  .navbar-nav li a li.current-menu-item a, .navbar-nav li a:hover {
@@ -627,22 +616,6 @@
    }
  }
  
- #mobile-menu-toggler {
-   color: #000;
-   font-size: 20px;
-   margin-left: auto;
-   margin-right: 10px;
- }
- 
- #mobile-menu-toggler:hover {
-   color: #ff7214;
- }
- 
- @media screen and (min-width: 992px) {
-   #mobile-menu-toggler {
-	 display: none;
-   }
- }
  
  .menu-dropdown {
    color: #000;
@@ -674,7 +647,7 @@
   */
  .banner {
    background-color: #f7f7f7;
-   padding: 2% 0 10%;
+   padding: 12% 0 10%;
  }
  
  .banner .content-box .tagline, .banner .content-box-fluid .tagline {
@@ -1135,7 +1108,7 @@
   background: url(../images/man.06f8be8.png) fixed no-repeat;
   background-size: cover;
   background-position: 0;
-  z-index: 3;
+  z-index: 1;
   background-color: beige;
   height: 100vh;
 }

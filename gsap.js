@@ -27,23 +27,25 @@ splitTypes.forEach((char) => {
 });
 
 
-const scrollContainer = document.querySelector('.projects__content');
-const projectContent = gsap.utils.toArray('.projects__wrap .projects__item');
-const projectTitle = gsap.utils.toArray('.projects__title__wrap > span');
-
-const titlewrap = document.querySelector('.projects__title__wrap');
 const container = document.querySelector(".index__section.projects");
+const projectWrap = document.querySelector(".projects__wrap");
 gsap.to(".projects__wrap", {
-  x: () => -(document.querySelector(".projects__wrap").offsetWidth - window.innerWidth),
+  x: () =>  -(document.querySelector(".projects__wrap").offsetWidth - window.innerWidth),
   ease: "sine.out",
   duration: 0.5,
   scrollTrigger: {
     trigger: ".projects__content",
     start: "top top",
-    end: () => "+=" + (document.querySelector(".projects__wrap").offsetWidth),
+    end: (x) => "+=" + (document.querySelector(".projects__wrap").offsetWidth),
     scrub: true,
     onUpdate: (self) => {
+      // console.log(self);
+      // if(window.innerWidth<700){
+      //   projectWrap.style.transform = 'translate(0, 0)';
+      //   projectContent.style.transform = 'translate(0, 0)';
+      // }
       // Calculate a color based on scroll progress
+      // rgb(20 34 83)
       const progress = self.progress;
       const newColor = `rgb(${Math.round(255 - 255 * progress)}, ${Math.round(255 - 255 * progress)}, ${Math.round(255 - 255 * progress)})`;
       const color = `rgb(${Math.round(255 * progress)}, ${Math.round(255 * progress)}, ${Math.round(255 * progress)})`;
@@ -70,6 +72,7 @@ gsap.to(".projects__title__wrap", {
 });
 
 
+
 gsap.set('.projects__item', {
   y: '100%'
 });
@@ -79,7 +82,6 @@ gsap.to('.projects__item', {
   duration: 0.5,
   stagger: 0.2,
   ease: 'linear',
-  // end: 'bottom 80%',
   scrollTrigger: {
     trigger: '.projects__wrap',
     start: 'top 70%',
@@ -115,14 +117,14 @@ gsap.fromTo(".index__section.intro .title div",
 
 gsap.fromTo(".polygon_section.about_us",
   {
-    x: '200px'
+    x: '300px'
   }, {
   x: 0,
-  duration: 0.5,
+  duration: 0.2,
   scrollTrigger: {
     trigger: ".polygon_section.about_us",
     start: () => "top 60%",
-    scrub: 1,
+    scrub: 0.2,
     // markers: true
   }
 });
@@ -142,3 +144,13 @@ gsap.fromTo(".logo", {
 });
 
 
+function menuClick(){
+  const menu = document.querySelector('.menu.u-abs.u-center');
+  if(menu){
+    if(menu.classList.contains('open')){
+      menu.classList.remove('open');
+    } else{
+      menu.classList.add('open');
+    }
+  }
+}

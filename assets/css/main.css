@@ -543,8 +543,8 @@ body {
 .section__introduction__paragraph {
     grid-column: 1;
     grid-row: 2;
-    font: 400 1.625rem/90% Roboto;
-    letter-spacing: -.02em;
+    /* font: 400 1.625rem/90% Roboto;
+    letter-spacing: -.02em; */
     margin: 3.125rem 0 6.25rem;
     max-width: 80%
 }
@@ -1252,8 +1252,8 @@ ul {
     position: fixed;
     right: 0;
     width: 100vw;
-    opacity: 0;
-    visibility: hidden;
+    /* opacity: 0;
+    visibility: hidden; */
     z-index: 99999
 }
 
@@ -1416,7 +1416,8 @@ ul {
     color: var(--color);
     background: var(--background);
     opacity: 0;
-    visibility: hidden
+    visibility: hidden;
+    line-height: 1.5;
 }
 
 .menu ul {
@@ -1434,7 +1435,7 @@ ul {
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
-    line-height: 82%;
+    line-height: 1.2;
     text-align: center;
     letter-spacing: -.02em;
     text-transform: uppercase
@@ -2192,4 +2193,13 @@ ul {
         height: 300px;
         left: -47px;
     }
+  }
+  @media (max-width: 699px){
+    .projects__wrap, .projects__content,.projects__title__wrap {
+        transform: translate(0,0) !important ;
+    }
+  }
+  .menu.open{
+    opacity: 1; 
+    visibility: inherit;
   }
