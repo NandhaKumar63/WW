@@ -39,13 +39,6 @@ gsap.to(".projects__wrap", {
     end: (x) => "+=" + (document.querySelector(".projects__wrap").offsetWidth),
     scrub: true,
     onUpdate: (self) => {
-      // console.log(self);
-      // if(window.innerWidth<700){
-      //   projectWrap.style.transform = 'translate(0, 0)';
-      //   projectContent.style.transform = 'translate(0, 0)';
-      // }
-      // Calculate a color based on scroll progress
-      // rgb(20 34 83)
       const progress = self.progress;
       const newColor = `rgb(${Math.round(255 - 255 * progress)}, ${Math.round(255 - 255 * progress)}, ${Math.round(255 - 255 * progress)})`;
       const color = `rgb(${Math.round(255 * progress)}, ${Math.round(255 * progress)}, ${Math.round(255 * progress)})`;
@@ -155,5 +148,6 @@ function menuClick(){
   }
 }
 if (/Mobi|Android/i.test(navigator.userAgent)) {
+  alert('disabled');
   gsap.core.globals("ScrollTrigger").disable();
 }
