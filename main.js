@@ -17,8 +17,8 @@ import * as THREE from 'three';
       var cameraRadius = 500; // Adjust the camera radius as needed
       var cameraSpeed = 0.5; // Adjust the camera movement speed as needed
       var easingFactor = 0.05; // Adjust the easing factor for smooth interpolation
-  init();
-  animate();
+  // init();
+  // animate();
 
 	function init() {
 
@@ -116,7 +116,7 @@ return indices;
 		document.addEventListener( 'touchstart', onDocumentTouchStart, false );
     document.addEventListener( 'touchmove', onDocumentTouchMove, false );
 		
- 		window.addEventListener( 'resize', onWindowResize, false );
+ 		// window.addEventListener( 'resize', onWindowResize, false );
 
 	} // end init();
 
