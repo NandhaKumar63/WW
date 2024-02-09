@@ -26,113 +26,113 @@ splitTypes.forEach((char) => {
 });
 
 
-const container = document.querySelector(".index__section.projects");
-const projectWrap = document.querySelector(".projects__wrap");
-gsap.to(".projects__wrap", {
-  x: () =>  -(document.querySelector(".projects__wrap").offsetWidth - window.innerWidth),
-  ease: "sine.out",
-  duration: 0.5,
-  scrollTrigger: {
-    trigger: ".projects__content",
-    start: "top top",
-    markers:true,
-    end: (x) => "+=" + (document.querySelector(".projects__wrap").offsetWidth),
-    scrub: 0.2,
-    onUpdate: (self) => {
-      const progress = self.progress;
-      const newColor = `rgb(${Math.round(255 - 255 * progress)}, ${Math.round(255 - 255 * progress)}, ${Math.round(255 - 255 * progress)})`;
-      const color = `rgb(${Math.round(255 * progress)}, ${Math.round(255 * progress)}, ${Math.round(255 * progress)})`;
-      // Update the background color
-      container.style.backgroundColor = newColor;
-      container.style.color = color;
-    }
+// const container = document.querySelector(".index__section.projects");
+// const projectWrap = document.querySelector(".projects__wrap");
+// gsap.to(".projects__wrap", {
+//   x: () =>  -(document.querySelector(".projects__wrap").offsetWidth - window.innerWidth),
+//   ease: "sine.out",
+//   duration: 0.5,
+//   scrollTrigger: {
+//     trigger: ".projects__content",
+//     start: "top top",
+//     markers:true,
+//     end: (x) => "+=" + (document.querySelector(".projects__wrap").offsetWidth),
+//     scrub: 0.2,
+//     onUpdate: (self) => {
+//       const progress = self.progress;
+//       const newColor = `rgb(${Math.round(255 - 255 * progress)}, ${Math.round(255 - 255 * progress)}, ${Math.round(255 - 255 * progress)})`;
+//       const color = `rgb(${Math.round(255 * progress)}, ${Math.round(255 * progress)}, ${Math.round(255 * progress)})`;
+//       // Update the background color
+//       container.style.backgroundColor = newColor;
+//       container.style.color = color;
+//     }
 
-  },
-});
+//   },
+// });
 
-gsap.to(".projects__title__wrap", {
-  x: () => -(document.querySelector(".projects__title__wrap").offsetWidth - window.innerWidth),
-  // ease: "sine.out",
-  duration: 0.2,
-  scrollTrigger: {
-    trigger: ".projects__content",
-    start: "top top",
-    end: () => "+=" + document.querySelector(".projects__title__wrap").offsetWidth,
-    scrub: 0.2,
-    pin: true,
-    pinSpacing: false
-  },
-});
-
-
-
-gsap.set('.projects__item', {
-  y: '100%'
-});
-
-gsap.to('.projects__item', {
-  y: 0,
-  duration: 0.5,
-  stagger: 0.1,
-  // ease: 'linear',
-  scrollTrigger: {
-    trigger: '.projects__wrap',
-    start: 'top 70%',
-    end: "+=500px",
-    scrub: 0.2,
-    // markers: true,
-  }
-})
-
-// // Project stack FX
-let allProjects = gsap.utils.toArray('.index__section.intro .title div');
-gsap.fromTo(".index__section.intro .title div",
-  {
-    y: window.innerHeight
-  }, {
-  y: -50 + (allProjects.length - 1),
-  // ease: "sine.out",
-  stagger: 0.2,
-  duration: 0.5,
-  scrollTrigger: {
-    trigger: ".index__section.intro",
-    start: () => "top 50px",
-    scrub: 0.2,
-    pin: true,
-    pinSpacing: false,
-    // markers: true
-  }
-});
+// gsap.to(".projects__title__wrap", {
+//   x: () => -(document.querySelector(".projects__title__wrap").offsetWidth - window.innerWidth),
+//   // ease: "sine.out",
+//   duration: 0.2,
+//   scrollTrigger: {
+//     trigger: ".projects__content",
+//     start: "top top",
+//     end: () => "+=" + document.querySelector(".projects__title__wrap").offsetWidth,
+//     scrub: 0.2,
+//     pin: true,
+//     pinSpacing: false
+//   },
+// });
 
 
-gsap.fromTo(".polygon_section.about_us",
-  {
-    x: '300px'
-  }, {
-  x: 0,
-  duration: 0.2,
-  scrollTrigger: {
-    trigger: ".polygon_section.about_us",
-    start: () => "top 90%",
-    end: () => "top 50%",
-    scrub: 0.2,
-    markers: true
-  }
-});
+
+// gsap.set('.projects__item', {
+//   y: '100%'
+// });
+
+// gsap.to('.projects__item', {
+//   y: 0,
+//   duration: 0.5,
+//   stagger: 0.1,
+//   // ease: 'linear',
+//   scrollTrigger: {
+//     trigger: '.projects__wrap',
+//     start: 'top 70%',
+//     end: "+=500px",
+//     scrub: 0.2,
+//     // markers: true,
+//   }
+// })
+
+// // // Project stack FX
+// let allProjects = gsap.utils.toArray('.index__section.intro .title div');
+// gsap.fromTo(".index__section.intro .title div",
+//   {
+//     y: window.innerHeight
+//   }, {
+//   y: -50 + (allProjects.length - 1),
+//   // ease: "sine.out",
+//   stagger: 0.2,
+//   duration: 0.5,
+//   scrollTrigger: {
+//     trigger: ".index__section.intro",
+//     start: () => "top 50px",
+//     scrub: 0.2,
+//     pin: true,
+//     pinSpacing: false,
+//     // markers: true
+//   }
+// });
 
 
-const bannerCaptionSplit = document.querySelectorAll('.banner-caption');
+// gsap.fromTo(".polygon_section.about_us",
+//   {
+//     x: '300px'
+//   }, {
+//   x: 0,
+//   duration: 0.2,
+//   scrollTrigger: {
+//     trigger: ".polygon_section.about_us",
+//     start: () => "top 90%",
+//     end: () => "top 50%",
+//     scrub: 0.2,
+//     markers: true
+//   }
+// });
 
-gsap.fromTo(".logo", {
-  scale: 0.9,
-  opacity: 0.8
-}, {
-  scale: 1,
-  opacity: 1,
-  duration: 2,
-  repeat: -1,
-  yoyo: true
-});
+
+// const bannerCaptionSplit = document.querySelectorAll('.banner-caption');
+
+// gsap.fromTo(".logo", {
+//   scale: 0.9,
+//   opacity: 0.8
+// }, {
+//   scale: 1,
+//   opacity: 1,
+//   duration: 2,
+//   repeat: -1,
+//   yoyo: true
+// });
 
 
 function menuClick(){
