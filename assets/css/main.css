@@ -234,7 +234,7 @@ summary {
 body,html {
     /* -ms-scroll-chaining: none;
     overscroll-behavior: none */
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 
 html {
