@@ -26,29 +26,29 @@ gsap.registerPlugin(ScrollTrigger);
 // });
 
 
-// const container = document.querySelector(".index__section.projects");
-// const projectWrap = document.querySelector(".projects__wrap");
-// gsap.to(".projects__wrap", {
-//   x: () =>  -(document.querySelector(".projects__wrap").offsetWidth - window.innerWidth),
-//   ease: "sine.out",
-//   duration: 0.5,
-//   scrollTrigger: {
-//     trigger: ".projects__content",
-//     start: "top top",
-//     markers:true,
-//     end: (x) => "+=" + (document.querySelector(".projects__wrap").offsetWidth),
-//     scrub: 0.2,
-//     onUpdate: (self) => {
-//       const progress = self.progress;
-//       const newColor = `rgb(${Math.round(255 - 255 * progress)}, ${Math.round(255 - 255 * progress)}, ${Math.round(255 - 255 * progress)})`;
-//       const color = `rgb(${Math.round(255 * progress)}, ${Math.round(255 * progress)}, ${Math.round(255 * progress)})`;
-//       // Update the background color
-//       container.style.backgroundColor = newColor;
-//       container.style.color = color;
-//     }
+const container = document.querySelector(".index__section.projects");
+const projectWrap = document.querySelector(".projects__wrap");
+gsap.to(".projects__wrap", {
+  x: () =>  -(document.querySelector(".projects__wrap").offsetWidth - window.innerWidth),
+  ease: "sine.out",
+  duration: 0.5,
+  scrollTrigger: {
+    trigger: ".projects__content",
+    start: "top top",
+    markers:true,
+    end: (x) => "+=" + (document.querySelector(".projects__wrap").offsetWidth),
+    scrub: 0.2,
+    onUpdate: (self) => {
+      const progress = self.progress;
+      const newColor = `rgb(${Math.round(255 - 255 * progress)}, ${Math.round(255 - 255 * progress)}, ${Math.round(255 - 255 * progress)})`;
+      const color = `rgb(${Math.round(255 * progress)}, ${Math.round(255 * progress)}, ${Math.round(255 * progress)})`;
+      // Update the background color
+      container.style.backgroundColor = newColor;
+      container.style.color = color;
+    }
 
-//   },
-// });
+  },
+});
 
 // gsap.to(".projects__title__wrap", {
 //   x: () => -(document.querySelector(".projects__title__wrap").offsetWidth - window.innerWidth),
