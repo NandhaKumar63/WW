@@ -19,7 +19,7 @@ splitTypes.forEach((char) => {
     scrollTrigger: {
       trigger: char,
       // markers: true,
-      scrub: 0.6,
+      scrub: 0.2,
       start: "top 90%",
       end: "top 50%"
     }
@@ -37,7 +37,7 @@ gsap.to(".projects__wrap", {
     trigger: ".projects__content",
     start: "top top",
     end: (x) => "+=" + (document.querySelector(".projects__wrap").offsetWidth),
-    scrub: true,
+    scrub: 0.2,
     onUpdate: (self) => {
       const progress = self.progress;
       const newColor = `rgb(${Math.round(255 - 255 * progress)}, ${Math.round(255 - 255 * progress)}, ${Math.round(255 - 255 * progress)})`;
@@ -58,7 +58,7 @@ gsap.to(".projects__title__wrap", {
     trigger: ".projects__content",
     start: "top top",
     end: () => "+=" + document.querySelector(".projects__title__wrap").offsetWidth,
-    scrub: true,
+    scrub: 0.2,
     pin: true,
     pinSpacing: false
   },
@@ -79,7 +79,7 @@ gsap.to('.projects__item', {
     trigger: '.projects__wrap',
     start: 'top 70%',
     end: "+=500px",
-    scrub: 0.5,
+    scrub: 0.2,
     // markers: true,
   }
 })
@@ -100,7 +100,7 @@ gsap.fromTo(".index__section.intro .title div",
   scrollTrigger: {
     trigger: ".index__section.intro",
     start: () => "top 50px",
-    scrub: 1,
+    scrub: 0.2,
     pin: true,
     pinSpacing: false,
     // markers: true
