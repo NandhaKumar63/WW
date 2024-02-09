@@ -1,29 +1,30 @@
 
 gsap.registerPlugin(ScrollTrigger);
+const tl = gsap.timeline();
 
-// const splitTypes = document.querySelectorAll('.index__section.about .paragraph .word .word__inner');
-// splitTypes.forEach((char) => {
-//   const text = new SplitType(char, {
-//     types: 'chars'
-//   });
+const splitTypes = document.querySelectorAll('.index__section.about .paragraph .word .word__inner');
+splitTypes.forEach((char) => {
+  const text = new SplitType(char, {
+    types: 'chars'
+  });
 
-//   gsap.from(text.chars, {
-//     backgroundPositionX: 0,
-//     // ease: "none",
-//     stagger: 0.2,
-//     y: 0,
-//     opacity: 0,
-//     transformOrigin: 'top',
-//     duration: 0.5,
-//     scrollTrigger: {
-//       trigger: char,
-//       markers: true,
-//       // scrub: 0.2,
-//       start: "top 80%",
-//       end: "top 50%"
-//     }
-//   });
-// });
+  gsap.from(text.chars, {
+    backgroundPositionX: 0,
+    ease: "none",
+    stagger: 0.2,
+    y: 0,
+    opacity: 0,
+    transformOrigin: 'top',
+    duration: 3,
+    scrollTrigger: {
+      trigger: char,
+      // markers: true,
+      scrub: 0.2,
+      start: "top 90%",
+      end: "top 50%"
+    }
+  });
+});
 
 
 const container = document.querySelector(".index__section.projects");
@@ -35,7 +36,6 @@ gsap.to(".projects__wrap", {
   scrollTrigger: {
     trigger: ".projects__content",
     start: "top top",
-    markers:true,
     end: (x) => "+=" + (document.querySelector(".projects__wrap").offsetWidth),
     scrub: 0.2,
     onUpdate: (self) => {
@@ -50,89 +50,91 @@ gsap.to(".projects__wrap", {
   },
 });
 
-// gsap.to(".projects__title__wrap", {
-//   x: () => -(document.querySelector(".projects__title__wrap").offsetWidth - window.innerWidth),
-//   // ease: "sine.out",
-//   duration: 0.2,
-//   scrollTrigger: {
-//     trigger: ".projects__content",
-//     start: "top top",
-//     end: () => "+=" + document.querySelector(".projects__title__wrap").offsetWidth,
-//     scrub: 0.2,
-//     pin: true,
-//     pinSpacing: false
-//   },
-// });
+gsap.to(".projects__title__wrap", {
+  x: () => -(document.querySelector(".projects__title__wrap").offsetWidth - window.innerWidth),
+  ease: "sine.out",
+  duration: 0.2,
+  scrollTrigger: {
+    trigger: ".projects__content",
+    start: "top top",
+    end: () => "+=" + document.querySelector(".projects__title__wrap").offsetWidth,
+    scrub: 0.2,
+    pin: true,
+    pinSpacing: false
+  },
+});
 
 
 
-// gsap.set('.projects__item', {
-//   y: '100%'
-// });
+gsap.set('.projects__item', {
+  y: '100%'
+});
 
-// gsap.to('.projects__item', {
-//   y: 0,
-//   duration: 0.5,
-//   stagger: 0.1,
-//   // ease: 'linear',
-//   scrollTrigger: {
-//     trigger: '.projects__wrap',
-//     start: 'top 70%',
-//     end: "+=500px",
-//     scrub: 0.2,
-//     // markers: true,
-//   }
-// })
+gsap.to('.projects__item', {
+  y: 0,
+  duration: 0.5,
+  stagger: 0.2,
+  ease: 'linear',
+  scrollTrigger: {
+    trigger: '.projects__wrap',
+    start: 'top 70%',
+    end: "+=500px",
+    scrub: 0.2,
+    // markers: true,
+  }
+})
 
-// // // Project stack FX
-// let allProjects = gsap.utils.toArray('.index__section.intro .title div');
-// gsap.fromTo(".index__section.intro .title div",
-//   {
-//     y: window.innerHeight
-//   }, {
-//   y: -50 + (allProjects.length - 1),
-//   // ease: "sine.out",
-//   stagger: 0.2,
-//   duration: 0.5,
-//   scrollTrigger: {
-//     trigger: ".index__section.intro",
-//     start: () => "top 50px",
-//     scrub: 0.2,
-//     pin: true,
-//     pinSpacing: false,
-//     // markers: true
-//   }
-// });
+// // Project stack FX
+let allProjects = gsap.utils.toArray('.index__section.intro .title div');
 
 
-// gsap.fromTo(".polygon_section.about_us",
-//   {
-//     x: '300px'
-//   }, {
-//   x: 0,
-//   duration: 0.2,
-//   scrollTrigger: {
-//     trigger: ".polygon_section.about_us",
-//     start: () => "top 90%",
-//     end: () => "top 50%",
-//     scrub: 0.2,
-//     markers: true
-//   }
-// });
+
+gsap.fromTo(".index__section.intro .title div",
+  {
+    y: window.innerHeight
+  }, {
+  y: -50 + (allProjects.length - 1),
+  ease: "sine.out",
+  stagger: 0.5,
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".index__section.intro",
+    start: () => "top 50px",
+    scrub: 0.2,
+    pin: true,
+    pinSpacing: false,
+    // markers: true
+  }
+});
 
 
-// const bannerCaptionSplit = document.querySelectorAll('.banner-caption');
+gsap.fromTo(".polygon_section.about_us",
+  {
+    x: '300px'
+  }, {
+  x: 0,
+  duration: 0.2,
+  scrollTrigger: {
+    trigger: ".polygon_section.about_us",
+    start: () => "top 60%",
+    scrub: 0.2,
+    // markers: true
+  }
+});
 
-// gsap.fromTo(".logo", {
-//   scale: 0.9,
-//   opacity: 0.8
-// }, {
-//   scale: 1,
-//   opacity: 1,
-//   duration: 2,
-//   repeat: -1,
-//   yoyo: true
-// });
+
+const bannerCaptionSplit = document.querySelectorAll('.banner-caption');
+
+gsap.fromTo(".logo", {
+  scale: 0.9,
+  opacity: 0.8
+}, {
+  scale: 1,
+  opacity: 1,
+  duration: 2,
+  repeat: -1,
+  yoyo: true
+});
 
 
 function menuClick(){
